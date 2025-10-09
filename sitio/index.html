@@ -4,29 +4,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-</head>
-  
-<body class="overflow-hidden">
-  
-    <div class="container-fluid p-0"> <!--contenedor-->
-        <div class="row g-0 vh-100"> <!--fila (imagenes pegadas)-->
-            <div class="col-md-4"> <!--columna-->
-                <img src="images/habitacion.jpeg" class="w-100 h-100 object-fit-cover" alt="Habitación">
-            </div>
-            <div class="col-md-4">
-                <img src="images/hotel.jpeg" class="w-100 h-100 object-fit-cover" alt="Hotel">
-            </div>
-            <div class="col-md-4">
-                <img src="images/habitacion1.jpeg" class="w-100 h-100 object-fit-cover" alt="Habitación 2">
-            </div>
-        </div>
+  </head>
+
+  <body>
+  <!-- LOGO arriba, independiente del row -->
+  <div class="position-absolute top-0 start-50 translate-middle-x mt-3 z-3">
+    <img src="images/logotipo.png" alt="logo" id="logo">
+  </div>
+  <!--navbar hamburguesa-->
+  <nav class="navbar navbar-dark bg-dark opacity-75 fixed-top shadow-sm">
+    <div class="container-fluid px-3">
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler border-0" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+        aria-controls="navbarToggleExternalContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+<!-- Contenido colapsable -->
+  <div class="collapse position-absolute top-0 start-0 w-100 z-2" id="navbarToggleExternalContent" data-bs-theme="dark">
+    <div class="bg-dark p-4 text-center">
+      <h5 class="text-white text-uppercase mb-3">Un hotel de verdad</h5>
+      <ul class="list-unstyled fs-5 mb-0 menu-lista">
+        <li><a href="#" class="text-white text-decoration-none d-block py-2">Home</a></li>
+        <li><a href="#" class="text-white text-decoration-none d-block py-2">About</a></li>
+        <li><a href="#" class="text-white text-decoration-none d-block py-2">Habitaciones</a></li>
+        <li><a href="#" class="text-white text-decoration-none d-block py-2">Reservas</a></li>
+        <li><a href="#" class="text-white text-decoration-none d-block py-2">Contacto</a></li>
+      </ul>
+    </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
 
+  <div class="container-fluid p-0">
+    <div class="row g-0 vh-100">
+      <div class="col-md-4 h-100">
+        <img src="images/habitacion.jpeg" class="img-fluid w-100 h-100 object-fit-cover" alt="Habitación">
+      </div>
+      <div class="col-md-4 h-100">
+        <img src="images/hotel.jpeg" class="img-fluid w-100 h-100 object-fit-cover" alt="Hotel">
+      </div>
+      <div class="col-md-4 h-100">
+        <img src="images/habitacion1.jpeg" class="img-fluid w-100 h-100 object-fit-cover" alt="Habitación 2">
+      </div>
+    </div>
+  </div>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
