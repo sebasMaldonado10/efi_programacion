@@ -27,24 +27,24 @@
         <form action="">
             <div class="mb-3 mt-3">
                 <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
             </div>
             <div class="mb-3">
                 <label for="reserva" class="form-label">Reserva:</label>
-                <input type="text" class="form-control form-control-lg" id="reserva" placeholder="Reserva" name="reserva">
+                <input type="text" class="form-control form-control-lg" id="reserva" placeholder="Reserva" name="reserva" required>
             </div>
             <div class="mb-3 mt-3">
                 <label for="fecha" class="form-label">Fecha de Ingreso:</label>
-                <input type="date" class="form-control" id="fecha" placeholder="Fecha de Ingreso" name="fecha">
+                <input type="date" class="form-control" id="fecha" placeholder="Fecha de Ingreso" name="fecha" required>
             </div>
             <div class="form-check mb-3">
                 <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" name="terminos"> Acepto los términos y condiciones
+                <input class="form-check-input" type="checkbox" name="terminos" required> Acepto los términos y condiciones
                 </label>
             </div>
             <div class="form-check mb-3">
                 <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" name="info"> Quiero recibir informacion comercial
+                <input class="form-check-input" type="checkbox" name="info"> Quiero recibir información comercial
                 </label>
             </div>
             <button type="submit" class="btn btn-primary">Siguiente</button>

@@ -1,0 +1,37 @@
+/*Oro (#C5A572) → Elegancia y exclusividad.
+Negro carbón (#0D0D0D) → Fondo premium.
+Blanco marfil (#F8F8F5) → Contraste elegante.
+Azul petróleo (#0F3D3E) → Toque de profundidad y relax.
+Verde esmeralda suave (#174C47) → Naturaleza y spa.
+*/
+
+/*VARIABLES PARA COLORES*/
+:root{
+    --color-fondo: #0D0D0D;         /*negro carbon*/
+    --color-contraste: #F8F8F5;     /*blanco marfil*/
+    --color-botones: #0F3D3E;       /*azul petroleo*/
+    --color-boton-hover: #1a6364;   /*azul petroleo claro para hover*/
+    --color-primario: #C5A572;      /*oro*/
+    --color-hover: #D8B878;         /*oro claro para hover*/
+    --color-secundario: #174C47;    /*verde esmeralda suave*/
+    --color-gris: #202020;          /*gris carbón intermedio*/
+}
+
+/*---------BODY---------*/
+.section-reservas {
+    background-color: var(--color-fondo);
+    color: var(--color-contraste);
+    
+}
+
+
+.boton {
+    background-color: var(--color-botones);
+    color: var(--color-contraste);
+    margin: 5%;
+    border: none;
+}
+
+.boton:hover {
+    background-color: var(--color-boton-hover);
+}
