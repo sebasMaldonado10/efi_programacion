@@ -1,0 +1,46 @@
+/*VARIABLES*/
+:root{
+    /*COLORES*/
+    --color-fondo: #0D0D0D;         /*negro carbon*/
+    --color-contraste: #F8F8F5;     /*blanco marfil*/
+    --color-botones: #0F3D3E;       /*azul petroleo*/
+    --color-boton-hover: #1a6364;   /*azul petroleo claro para hover*/
+    --color-primario: #C5A572;      /*oro*/
+    --color-hover: #D8B878;         /*oro claro para hover*/
+    --color-secundario: #174C47;    /*verde esmeralda suave*/
+    --color-gris: #202020;          /*gris carbón intermedio*/
+
+    /*TIPOGRAFIA*/
+    --fuente-titulo: 'Cormorant Garamond', serif;
+    --fuente-principal: 'Lato', serif;
+}
+
+/*---------BODY---------*/
+body{
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-contraste);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--fuente-titulo);
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--color-contraste);
+}
+
+.boton {
+    background-color: var(--color-botones);
+    color: var(--color-contraste);
+    border: none;
+}
+
+.boton:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/*Seccion Reservas*/
+#card-habitacion{
+    background-color: var(--color-gris);
+    color: var(--color-contraste);
+}
