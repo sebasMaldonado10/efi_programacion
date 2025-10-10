@@ -17,13 +17,12 @@ Verde esmeralda suave (#174C47) → Naturaleza y spa.
     --color-gris: #202020;          /*gris carbón intermedio*/
 }
 
-/*---------BODY---------*/
+/*---------BODY RESERVAS---------*/
 .section-reservas {
     background-color: var(--color-fondo);
     color: var(--color-contraste);
     
 }
-
 
 .boton {
     background-color: var(--color-botones);
@@ -35,3 +34,5 @@ Verde esmeralda suave (#174C47) → Naturaleza y spa.
 .boton:hover {
     background-color: var(--color-boton-hover);
 }
+
+.section-reservas .
