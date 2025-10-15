@@ -5,12 +5,27 @@
   --text:    #f8f8f5;     /* blanco marfil */
   --radius:  1rem;        /* borde redondeado suave */
   --shadow:  0 10px 30px rgba(0,0,0,.35);
+  /*COLORES DE CARLA, DESPUES LOS UNIREMOS*/
+  --color-fondo: #0D0D0D;         /*negro carbon*/
+  --color-contraste: #F8F8F5;     /*blanco marfil*/
+  --color-botones: #0F3D3E;       /*azul petroleo*/
+  --color-boton-hover: #1a6364;   /*azul petroleo claro para hover*/
+  --color-primario: #C5A572;      /*oro*/
+  --color-hover: #D8B878;         /*oro claro para hover*/
+  --color-secundario: #174C47;    /*verde esmeralda suave*/
+  --color-gris: #202020;          /*gris carbón intermedio*/
+
+  /*TIPOGRAFIA*/
+  --fuente-titulo: 'Cormorant Garamond', serif;
+  --fuente-principal: 'Lato', serif;  
 }
 
 /* Fondo general y color de texto */
 body{
   background: var(--bg-page);
   color: var(--text);
+  font-family: var(--fuente-principal);
+
 }
 
 /* Logo */
@@ -115,6 +130,13 @@ h5 {
   text-underline-offset:.35em;
 }
 
+.boton:hover {
+    background-color: var(--color-boton-hover);
+}
 
+/*Seccion Reservas*/
+#card-habitacion{
+    background-color: var(--color-gris);
+    color: var(--color-contraste);
+}
 
- 
