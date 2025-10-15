@@ -30,6 +30,12 @@ h5 {
   color: var(--text);
 }
 
+/* Espaciado general entre secciones */
+.section-spacing {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 /* ========== 3 imágenes full-screen ========== */
 .hero-photos{
   min-height: 100svh;     /* soporta barras móviles modernas */
@@ -45,9 +51,10 @@ h5 {
 }
 
 /* ========== About (replica Aken) ========== */
+
 .about-section .row{
   box-shadow: var(--shadow);
-  overflow: hidden;
+  overflow: hidden;  /* recorta bordes redondeados */
 }
 
 /* Panel de texto (izquierda) */
@@ -84,6 +91,30 @@ h5 {
   .about-text{ min-height: unset; }
   .about-media{ min-height: 0; height: auto; } /* video o imagen se adapta */
 }
+
+/* Alto moderado y consistente del carrusel */
+.room-carousel .carousel-inner{
+  height: clamp(400px, 70vh, 600px);
+}
+.room-carousel .carousel-item{ height: 100%; }
+.room-carousel img{
+  height: 100%;
+  object-fit: cover; /* llena el contenedor */
+  object-position: center;
+  display: block; /* elimina espacio inferior */
+}
+
+/* Tabs estilo subrayado */
+#roomsTabs .nav-link{
+  color: rgba(255,255,255,.85);
+  padding: .25rem .5rem;
+}
+#roomsTabs .nav-link:hover{ color:#fff; }
+#roomsTabs .nav-link.active{
+  color:#fff;
+  text-underline-offset:.35em;
+}
+
 
 
  
