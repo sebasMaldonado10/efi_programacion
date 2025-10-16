@@ -2,12 +2,10 @@
 :root{
   --bg-page: #2f2f2f;     /* fondo oscuro general */
   --panel:   #697075;     /* panel gris del texto */
-  --text:    #f8f8f5;     /* blanco marfil */
+  --color-text:    #f8f8f5;     /* blanco marfil */
   --radius:  1rem;        /* borde redondeado suave */
   --shadow:  0 10px 30px rgba(0,0,0,.35);
-  /*COLORES DE CARLA, DESPUES LOS UNIREMOS*/
   --color-fondo: #0D0D0D;         /*negro carbon*/
-  --color-contraste: #F8F8F5;     /*blanco marfil*/
   --color-botones: #0F3D3E;       /*azul petroleo*/
   --color-boton-hover: #1a6364;   /*azul petroleo claro para hover*/
   --color-primario: #C5A572;      /*oro*/
@@ -23,7 +21,7 @@
 /* Fondo general y color de texto */
 body{
   background: var(--bg-page);
-  color: var(--text);
+  color: var(--color-text);
   font-family: var(--fuente-principal);
 
 }
@@ -35,14 +33,14 @@ body{
 
 /* ========== Menú ========== */
 .menu-lista a{
-  color: var(--text);
+  color: var(--color-text);
   text-decoration: none;
   padding: 5px 0;
 }
 
 h5 {
   text-align: center;
-  color: var(--text);
+  color: var(--color-text);
 }
 
 /* Espaciado general entre secciones */
@@ -137,6 +135,6 @@ h5 {
 /*Seccion Reservas*/
 #card-habitacion{
     background-color: var(--color-gris);
-    color: var(--color-contraste);
+    color: var(--color-text);
 }
 
