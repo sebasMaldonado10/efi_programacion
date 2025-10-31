@@ -141,12 +141,30 @@ h5 {
   background-color: var(--color-botones);
   color: var(--color-text);
 }
-#card-habitacion{
+.card-habitacion{
     background-color: var(--color-gris);
     color: var(--color-text);
-    display: flex;
-
 }
+.card-habitacion .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.card-habitacion .card-body {
+  margin-top: auto;
+  text-align: right;
+}
+.card-habitacion img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#ofertas{
+  background-color: var(--color-gris);
+  border-radius: 10px;
+}
+
+
 
 
 /* ========== RESPOSIVE ========== */
@@ -162,6 +180,11 @@ h5 {
   .form-reservas{ object-position: center; }
 }
 
+@media (min-width: 992px) {
+  .card-habitacion {
+    max-width: 700px;
+  }
+}
 
 /* Alto moderado y consistente del carrusel */
 .room-carousel .carousel-inner{
