@@ -6,8 +6,8 @@
   --radius:  1rem;        /* borde redondeado suave */
   --shadow:  0 10px 30px rgba(0,0,0,.35);
   --color-fondo: #0D0D0D;         /*negro carbon*/
-  --color-botones: #0F3D3E;       /*azul petroleo*/
-  --color-boton-hover: #1a6364;   /*azul petroleo claro para hover*/
+  --color-botones: #818b8b;       /* gris claro */
+  --color-boton-hover: #646b6b;   /* gris oscuro para hover*/
   --color-primario: #C5A572;      /*oro*/
   --color-hover: #D8B878;         /*oro claro para hover*/
   --color-secundario: #174C47;    /*verde esmeralda suave*/
@@ -16,22 +16,58 @@
   /*TIPOGRAFIA*/
   --fuente-titulo: 'Cormorant Garamond', serif;
   --fuente-principal: 'Lato', serif;  
+    /*tamaño*/
+  --fs-base: 1rem;               /* 16px */
+  --fs-h3-min: 1.125rem;         /* 18px */
+  --fs-h3-max: 1.75rem;          /* 28px */
+  --fs-h3-fluid: clamp(var(--fs-h3-min), calc(0.5rem + 1.6vw), var(--fs-h3-max));
 }
 
-/* Fondo general y color de texto */
+/* ======= GENERAL, FONDO, TAMAÑOS ======== */
 body{
   background: var(--bg-page);
   color: var(--color-text);
   font-family: var(--fuente-principal);
-
 }
 
-/* Logo */
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--fuente-titulo);
+  color: var(--color-primario);
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: var(--fs-h1); font-weight: 700; }
+h2 { font-size: var(--fs-h2); font-weight: 600; }
+h3 { font-size: var(--fs-h3); font-weight: 600; }
+h4 { font-size: var(--fs-h4); font-weight: 500; }
+h5 { font-size: var(--fs-h5); font-weight: 500; }
+h6 { font-size: var(--fs-h6); font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; }
+
+p, li, input, button {
+  font-family: var(--fuente-principal);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
 #logo{
   max-height: 200px;
 }
+#logotipo{
+  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* ========== Menú ========== */
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== MENU ========== */
 .menu-lista a{
   color: var(--color-text);
   text-decoration: none;
@@ -63,7 +99,7 @@ h5 {
   object-fit: cover;
 }
 
-/* ========== About (replica Aken) ========== */
+/* ========== ABOUT (replica Aken) ========== */
 
 .about-section .row{
   box-shadow: var(--shadow);
@@ -99,11 +135,33 @@ h5 {
   border-color: #f1f3f5;
 }
 
-/* ========== Responsive ========== */
+/* ========== RESERVAS ============ */
+/*Seccion Reservas*/
+.boton{
+  background-color: var(--color-botones);
+  color: var(--color-text);
+}
+#card-habitacion{
+    background-color: var(--color-gris);
+    color: var(--color-text);
+    display: flex;
+
+}
+
+
+/* ========== RESPOSIVE ========== */
 @media (max-width: 991.98px){ /* < lg */
   .about-text{ min-height: unset; }
   .about-media{ min-height: 0; height: auto; } /* video o imagen se adapta */
+
+    /*Reservas*/
+  .card-habitacion{
+    .card-habitacion .col-md-4 img {min-height: 200px;}
+  }
+
+  .form-reservas{ object-position: center; }
 }
+
 
 /* Alto moderado y consistente del carrusel */
 .room-carousel .carousel-inner{
@@ -130,11 +188,5 @@ h5 {
 
 .boton:hover {
     background-color: var(--color-boton-hover);
-}
-
-/*Seccion Reservas*/
-#card-habitacion{
-    background-color: var(--color-gris);
-    color: var(--color-text);
 }
 
