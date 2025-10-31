@@ -27,8 +27,11 @@
         <!-- Menú colapsable -->
         <div class="collapse position-absolute top-0 start-0 w-100 z-2" id="navbarToggleExternalContent" data-bs-theme="dark">
             <div class="bg-dark p-4 text-start ps-5">
-                <img class="img-fluid" src="images/isotipo.png" alt="Oasis Hotel & Spa" loading="lazy" id="logotipo">
-                <h5>Un hotel de verdad</h5>
+                <!-- Logo centrado arriba -->
+                <div class="position-absolute top-0 start-50 translate-middle-x mt-3 z-3">
+                    <img src="images/logotipo.png" alt="Logo Oasis Hotel" id="logo">
+                </div>
+                <h5 class="text-cener">UN HOTEL DE VERDAD</h5>
                 <ul class="list-unstyled fs-5 mb-0 menu-lista">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -38,7 +41,6 @@
                 </ul>
             </div>
         </div>
-
     </header>
 
     <!--MAIN-->
@@ -47,8 +49,7 @@
 
             <!--FORM RESERVAS-->
             <section class="col-12 col-md-4" id="form-reservas">
-                <div class="container p-5 my-5 bg-dark text-white">
-                    
+                <div class="container p-5 my-5 bg-dark text-white ms-5">
                     <hr>
                     <h3 class="mb-2 text-center">ENTRADA/SALIDA</h3>
                     <input type="date" class="form-control" placeholder="Entrada/Salida">
@@ -78,7 +79,7 @@
             </section>
 
             <!--CARDS CON HABITACIONES-->
-            <section class="col-12 col-md-8">
+            <section class="col-12 col-md-8 pt-5">
                 <div class="container-fluid">
                     <article class="card mb-3 overfload-hidden mx-auto" style="max-width: 720px" id="card-habitacion">
                         <div class="row g-0">
