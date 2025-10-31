@@ -11,28 +11,51 @@
 </head>
 
 <body class="reservas">    
-    <!--No se si va header o nav-->
     <header class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-        <img src="images/isotipo.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-center">
-        <h1>Oasis Hotel & Spa</h1>
-        </a>
+        <!-- Navbar hamburguesa -->
+        <nav class="navbar navbar-dark bg-dark opacity-75 fixed-top shadow-sm">
+            <div class="container-fluid px-3">
+            <button class="navbar-toggler border-0" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+        </nav>
+
+        <!-- Menú colapsable -->
+        <div class="collapse position-absolute top-0 start-0 w-100 z-2" id="navbarToggleExternalContent" data-bs-theme="dark">
+            <div class="bg-dark p-4 text-start ps-5">
+                <!-- Logo centrado arriba -->
+                <div class="position-absolute top-0 start-50 translate-middle-x mt-3 z-3">
+                    <img src="images/logotipo.png" alt="Logo Oasis Hotel" id="logo">
+                </div>
+                <h5 class="text-cener">UN HOTEL DE VERDAD</h5>
+                <ul class="list-unstyled fs-5 mb-0 menu-lista">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Habitaciones</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <!--MAIN-->
-    <main class="container-fluid">
-        <div class="row">
+    <main class="container-fluid pt-5 pt-md-4">
+        <div class="row g-4">
 
             <!--FORM RESERVAS-->
-            <section class="col-sm-4" id="form-reservas">
-                <div class="container p-5 my-5 bg-dark text-white">
-                    
+            <section class="col-12 col-md-4" id="form-reservas">
+                <div class="container p-5 my-5 bg-dark text-white ms-5">
                     <hr>
-                    <h3>ENTRADA/SALIDA</h3>
+                    <h3 class="mb-2 text-center">ENTRADA/SALIDA</h3>
                     <input type="date" class="form-control" placeholder="Entrada/Salida">
                     
                     <hr>
-                    <h3>HABITACIONES</h3>
+                    <h3 class="mb-2 text-center">HABITACIONES</h3>
                     <div class="row">
                         <div class="col">
                             <i class="fa fa-male" aria-hidden="true"></i>
@@ -49,58 +72,67 @@
                     </div>
 
                     <br>
-                    <button type="submit" class="btn boton">AÑADIR HABITACIÓN</button>
+                    <button type="submit" class="btn boton m-1">AÑADIR HABITACIÓN</button>
                     <br>
-                    <button type="submit" class="btn boton">BUSCAR</button>
+                    <a class="btn boton m-1" href="detalle_reservas.html">BUSCAR</a>
                 </div>
             </section>
 
             <!--CARDS CON HABITACIONES-->
-            <section class="col-sm-8">
+            <section class="col-12 col-md-8 pt-5">
                 <div class="container-fluid">
-                    
-                    <h2><i class="fa-solid fa-bed"></i> Busqueda</h2>
-
-                    <article class="card mb-3" style="width:700px" id="card-habitacion">
+                    <article class="card mb-3 overflow-hidden mx-auto card-habitacion" style="max-width: 720px">
                         <div class="row g-0">
-                            <div class="col-md-4">
-                                <img class="card-img-top" src="" alt="Habitacion Ejecutiva">
+
+                            <!-- Imagen -->
+                            <div class="col-12 col-md-4">
+                                <img class="img-fluid" src="images/suite.jpeg" alt="Habitacion Ejecutiva" loading="lazy">
                             </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title">Ejecutiva</h4>
+
+                            <!-- Contenido -->
+                            <div class="col-12 col-md-8">
+                                <div class="card-body flex-column">
+                                    <h3 class="card-title">Ejecutiva</h3>
                                     <p class="card-text">Hervidor eléctrico | Aire acondicionado | Frigobar | TV Pantalla plana | Secador de pelo | Caja de seguridad</p>
-                                    <a href="#" class="btn boton">INFORMACIÓN Y RESERVA</a>
+                                    <a href="detalle_reservas.html" class="btn boton">INFORMACIÓN Y RESERVA</a>
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <article class="card mb-3" style="width:700px" id="card-habitacion">
+                    <article class="card mb-3 overflow-hidden mx-auto card-habitacion" style="max-width: 720px">
                         <div class="row g-0">
-                            <div class="col-md-4">
-                                <img class="card-img-top" src="images/suite.jpeg" alt="Habitacion Suite">
+
+                            <!-- Imagen -->
+                            <div class="col-12 col-md-4">
+                                <img class="img-fluid" src="images/suite.jpeg" alt="Habitacion Suite" loading="lazy">
                             </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title">Suite</h4>
+
+                            <!-- Contenido -->
+                            <div class="col-12 col-md-8">
+                                <div class="card-body flex-column">
+                                    <h3 class="card-title">Suite</h3>
                                     <p class="card-text">Hervidor eléctrico | Aire acondicionado | Frigobar | TV Pantalla plana | Secador de pelo | Caja de seguridad</p>
-                                    <a href="#" class="btn boton">INFORMACIÓN Y RESERVA</a>
+                                    <a href="detalle_reservas.html" class="btn boton">INFORMACIÓN Y RESERVA</a>
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <article class="card mb-3" style="width:700px" id="card-habitacion">
+                    <article class="card mb-3 overflow-hidden mx-auto card-habitacion" style="max-width: 720px">
                         <div class="row g-0">
-                            <div class="col-md-4">
-                                <img class="card-img-top" src="images/suite_presidencial.jpeg" alt="Habitacion Suite Presidencial">
+
+                            <!-- Imagen -->
+                            <div class="col-12 col-md-4">
+                                <img class="img-fluid"  src="images/suite_presidencial.jpeg" alt="Habitacion Suite Presidencial"
+                                loading="lazy">
                             </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title">Suite Presidencial</h4>
+                            <!-- Contenido -->
+                            <div class="col-12 col-md-8">
+                                <div class="card-body flex-column">
+                                    <h3 class="card-title">Suite Presidencial</h3>
                                     <p class="card-text">Hervidor eléctrico | Aire acondicionado | Balcón | Frigobar | TV Pantalla plana | Sofa | Coffee Machine | Secador de pelo</p>
-                                    <a href="#" class="btn boton">INFORMACIÓN Y RESERVA</a>
+                                    <a href="detalle_reservas.html" class="btn boton">INFORMACIÓN Y RESERVA</a>
                                 </div>
                             </div>
                         </div>
