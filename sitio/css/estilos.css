@@ -18,9 +18,13 @@
   --fuente-principal: 'Lato', serif;  
     /*tamaño*/
   --fs-base: 1rem;               /* 16px */
-  --fs-h3-min: 1.125rem;         /* 18px */
-  --fs-h3-max: 1.75rem;          /* 28px */
-  --fs-h3-fluid: clamp(var(--fs-h3-min), calc(0.5rem + 1.6vw), var(--fs-h3-max));
+  --fsmall: 0.75rem;             /* 12px */
+  --fs-h1: 2.50rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.75rem;
+  --fs-h4: 1.50rem;
+  --fs-h5: 1.25rem;
+  --fs-h6: 1.15rem;
 }
 
 /* ======= GENERAL, FONDO, TAMAÑOS ======== */
@@ -36,14 +40,15 @@ h1, h2, h3, h4, h5, h6{
   line-height: 1.2;
   margin-bottom: 0.5em;
 }
-
-h1 { font-size: var(--fs-h1); font-weight: 700; }
-h2 { font-size: var(--fs-h2); font-weight: 600; }
-h3 { font-size: var(--fs-h3); font-weight: 600; }
-h4 { font-size: var(--fs-h4); font-weight: 500; }
-h5 { font-size: var(--fs-h5); font-weight: 500; }
-h6 { font-size: var(--fs-h6); font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; }
 */
+
+h2 { font-size: var(--fs-h2);}
+h1 { font-size: var(--fs-h1);}
+h3 { font-size: var(--fs-h3);}
+h4 { font-size: var(--fs-h4);}
+h5 { font-size: var(--fs-h5);}
+h6 { font-size: var(--fs-h6);}
+
 p, li, input, button {
   font-family: var(--fuente-principal);
   font-size: var(--fs-base);
@@ -59,6 +64,13 @@ p, li, input, button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* ver para que el logo quede un poco mas opaco */
+#logo::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .center{
@@ -141,22 +153,38 @@ h5 {
   background-color: var(--color-botones);
   color: var(--color-text);
 }
+
 .card-habitacion{
     background-color: var(--color-gris);
     color: var(--color-text);
 }
-.card-habitacion .card-body {
+
+/* ========== DETALLE RESERVAS ============ */
+/*Seccion Detalle*/
+.card-info-habitacion{
+  background-color: var(--color-gris);
+  color: var(--color-text);
+  display: flex;
+}
+.card-info-habitacion .col-md-8 {
+  display: flex;
+}
+.card-info-habitacion .card-body{
   display: flex;
   flex-direction: column;
+  flex: 1; 
+  padding: 1.5rem;
 }
-.card-habitacion .card-body {
-  margin-top: auto;
-  text-align: right;
+
+.card-info-habitacion img{
+  object-position: center;
+  display: block;
+  height: 300px;
 }
-.card-habitacion img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+
+.card-info-habitacion ul{
+  padding-left: 4rem; 
+  font-size: var(--fsmall);
 }
 
 #ofertas{
@@ -164,6 +192,86 @@ h5 {
   border-radius: 10px;
 }
 
+/* ========== CARRITO ============ */
+/*Seccion Carrito*/
+
+.img-tarjetas{
+  height: 100px;
+  width: auto;
+}
+.tarjeta{
+  max-width: 250px;
+  width: 100%;
+}
+
+/* ========== SPA ============== */
+/* Seccion Spa */
+.hero-spa {
+  background-image: url(/images/img_spa.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-spa::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Primera imagen (base) */
+.img-spa1 {
+  max-width: 60%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Segunda imagen (superpuesta) */
+.img-spa2 {
+  max-width: 40%;
+  position: absolute;
+  bottom: -30px;       
+  right: 50px;  
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+#spa-info {
+  min-height: 350px;
+}
+
+#spa-info .h1 {
+  min-height: 350px;
+}
+
+/* segunda portada */
+.hero-spa2 {
+  background-image: url(/images/aceites_spa.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-spa2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#spa-reservas img{
+  height: 700px;
+}
+
+
+.carousel-item img {
+  object-fit: cover;
+  height: 300px;
+}
 
 /* ========== RESPOSIVE ========== */
 @media (max-width: 991.98px){ /* < lg */
@@ -176,12 +284,19 @@ h5 {
   }
 
   .form-reservas{ object-position: center; }
+
+  /*Carrito*/
+  .tarjeta {max-width: 90%;}
 }
 
 @media (min-width: 992px) {
   .card-habitacion {
     max-width: 700px;
   }
+
+  .img-spa3, .img-spa4 {
+  height: auto;
+}
 }
 
 /* Alto moderado y consistente del carrusel */
