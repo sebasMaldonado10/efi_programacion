@@ -190,4 +190,65 @@ h5 {
 /* Para que la barra no tape contenido */
 body{ padding-bottom: 100px; }
 
+/* seccion de eventos */
+
+.eventos-section {
+  background-color: var(--panel);
+  color: var(--color-text);
+  padding: 4rem 2rem;
+}
+
+.eventos-img {
+  object-fit: cover; /* llena el contenedor */
+  height: 100%;
+  width: 100%; 
+  display: block; /* elimina espacio inferior */
+}
+
+.eventos-section .btn{
+  background-color: var(--panel);
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.eventos-section .btn:hover{
+  background-color: var(--color-text);
+  color: var(--color-fondo);
+} 
+
+/* ========== FOOTER ========== */
+.footer-section{
+  background: var(--bg-page);
+  color: var(--color-text);
+}
+
+.footer-section a{
+  color: var(--color-text);
+  text-decoration: underline;
+  transition: color .2s ease;
+}
+
+.footer-section a:hover{
+  color: var(--color-primario);
+}
+
+.footer-section .btn{
+  background-color: var(--bg-page);
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.footer-section .btn:hover{
+  background-color: var(--color-primario);
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .footer-section { text-align: center; }
+  .footer-section .text-md-end { text-align: center !important; }
+}
+
+
 
