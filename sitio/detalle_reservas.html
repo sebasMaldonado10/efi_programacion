@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Detalle de Reserva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="detalleReservas">    
+    <header class="container-fluid">
+        <!-- Navbar hamburguesa -->
+        <nav class="navbar navbar-dark bg-dark opacity-75 fixed-top shadow-sm">
+            <div class="container-fluid px-3">
+            <button class="navbar-toggler border-0" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+        </nav>
+
+        <!-- Menú colapsable -->
+        <div class="collapse position-absolute top-0 start-0 w-100 z-2" id="navbarToggleExternalContent" data-bs-theme="dark">
+            <div class="bg-dark p-4 text-start ps-5">
+                <!-- Logo centrado arriba -->
+                <div class="position-absolute top-0 start-50 translate-middle-x mt-3 z-3">
+                    <img src="images/logotipo.png" alt="Logo Oasis Hotel" id="logo">
+                </div>
+                <h5 class="text-cener">UN HOTEL DE VERDAD</h5>
+                <ul class="list-unstyled fs-5 mb-0 menu-lista">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Habitaciones</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+    <!--MAIN-->
+    <main class="pt-5 pt-md-4">
+        <!-- Resumen -->
+        <section class="container py-5" id="resumen-reserva">
+            <div class="mx-auto bg-dark text-white rounded-3 shawdow p-3 p-md-4" style="max-width: 520px;">
+                <h3 class="mb-2 text-center">RESUMEN</h3>
+                <hr class="my-3">
+                <p class="mb-2 text-center"><b>ENTRADA</b> MIE 29 OCTUBRE 2025</p>
+                <p class="mb-2 text-center"><b>SALIDA</b> JUE 30 OCTUBRE 2025</p>
+                <p class="mb-2 text-center">
+                    1 x <i class="fa fa-male" aria-hidden="true"></i> 
+                    1 x <i class="fa fa-moon-o" aria-hidden="true"></i> 
+                    1 x <i class="fa fa-home" aria-hidden="true"></i>
+                </p>
+                <br>
+                <div class="text-center">
+                    <a class="btn boton m-1" href="reservas.html">MODIFICAR LA BÚSQUEDA</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ofertas -->
+        <section>
+            <div class="container py-5" id="ofertas">
+                <div id="carouselAuto" class="carousel slide mx-auto text-white ps-3" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <h2 class="mb-2 p-2 text-center text-white">OFERTAS DISPONIBLES</h2>
+
+                        <!-- Contenido -->
+                        <div class="carousel-item active">
+                            <p class="mb-2"><b>Last Minute</b></p>
+                            <p class="mb-2">Reserva de último minuto con un descuento del 25%</p>
+                            <div class="text-center">
+                                <a href="#" class="btn boton m-1">ACTIVA</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <p><b>Reservando directo en nuestra web!</b></p>
+                            <p>Obtené un descuento especial sobre nuestras tarifas</p>
+                            <div class="text-center">
+                                <a href="#" class="btn boton m-1">ACTIVA</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <p><b>25 % OFF</b></p>
+                            <p>Reserva con un 25% off</p>
+                            <div class="text-center">
+                                <a href="#" class="btn boton m-1">ACTIVA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- TENGO QUE AGRANDAR LAS CARDS -->
+        <!-- Info Habitaciones -->
+        <section class="pt-5">
+            <div class="container">
+                <h2 class="text-center mb-4">NUESTRAS HABITACIONES</h2>
+
+                <article class="card mb-3 overflow-hidden card-habitacion">
+                    <div class="row g-0">
+                        <!-- Imagen -->
+                        <div class="col-12 col-md-4">
+                            <img class="img-fluid" src="images/suite.jpeg" alt="Habitacion Ejecutiva" loading="lazy">
+                        </div>
+
+                        <!-- Contenido -->
+                        <div class="col-12 col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title mb-2">Ejecutiva</h3>
+                                <p class="card-text mb-3">Hervidor eléctrico | Aire acondicionado | Frigobar | TV Pantalla plana | Secador de pelo | Caja de seguridad</p>
+                                <!-- Precio y boton -->
+                                <p class="text-end">desde 103,13 USD/Noche</p>
+                                <p class="text-end">Disponible</p>
+                                <div class="d-flex"><a href="carrito.html" class="btn boton ms-auto">SELECCIONAR</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card mb-3 overflow-hidden card-habitacion">
+                    <div class="row g-0">
+
+                        <!-- Imagen -->
+                        <div class="col-12 col-md-4">
+                            <img class="img-fluid" src="images/suite.jpeg" alt="Habitacion Suite" loading="lazy">
+                        </div>
+
+                        <!-- Contenido -->
+                        <div class="col-12 col-md-8">
+                            <div class="card-body flex-column">
+                                <h3 class="card-title m-2">Suite</h3>
+                                <p class="card-text m-3">Hervidor eléctrico | Aire acondicionado | Frigobar | TV Pantalla plana | Secador de pelo | Caja de seguridad</p>
+                                <p class="text-end">desde 178,13 USD/Noche</p>
+                                <p class="text-end">Disponible</p>
+                                <div class="d-flex"><a href="carrito.html" class="btn boton ms-auto">SELECCIONAR</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card mb-3 overflow-hidden card-habitacion">
+                    <div class="row g-0">
+
+                        <!-- Imagen -->
+                        <div class="col-12 col-md-4">
+                            <img class="img-fluid"  src="images/suite_presidencial.jpeg" alt="Habitacion Suite Presidencial"
+                            loading="lazy">
+                        </div>
+                        <!-- Contenido -->
+                        <div class="col-12 col-md-8">
+                            <div class="card-body flex-column">
+                                <h3 class="card-title m-2">Suite Presidencial</h3>
+                                <p class="card-text m-3">Hervidor eléctrico | Aire acondicionado | Balcón | Frigobar | TV Pantalla plana | Sofa | Coffee Machine | Secador de pelo</p>
+                                <p class="text-end">desde 205,31 USD/Noche</p>
+                                <p class="text-end">Disponible</p>
+                                <div class="d-flex"><a href="carrito.html" class="btn boton ms-auto">SELECCIONAR</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
+
