@@ -165,8 +165,6 @@ h5 {
 }
 
 
-
-
 /* ========== RESPOSIVE ========== */
 @media (max-width: 991.98px){ /* < lg */
   .about-text{ min-height: unset; }
@@ -211,5 +209,123 @@ h5 {
 
 .boton:hover {
     background-color: var(--color-boton-hover);
+}
+
+/*Seccion Reservas*/
+#card-habitacion{
+    background-color: var(--color-gris);
+    color: var(--color-text);
+}
+
+/* ===== CHECK-IN FLOTANTE ===== */
+.checkin-bar{
+  position: fixed; 
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  z-index: 1200;
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(6px);
+  padding: .7rem .5rem;
+}
+
+/* Inputs estilo línea */
+.checkin-input{
+  background: transparent !important;
+  color: #fff !important;
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  border-radius: 0 !important;
+}
+
+/* OJO: el select es el mismo elemento con ambas clases */
+.form-select.checkin-input{
+  background: transparent !important;
+  color: #fff !important;
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* color para las options del select */
+.form-select.checkin-input option{
+  color: var(--color-text);
+  background-color: var(--bg-page)
+}
+
+/* boton de reserva*/
+.checkin-bar .btn{
+  color: var(--color-text);
+  border-color: var(--color-text);
+  transition: background-color .2s ease;
+}
+
+.checkin-bar .btn:hover{
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+/* Para que la barra no tape contenido */
+body{ padding-bottom: 100px; }
+
+/* seccion de eventos */
+
+.eventos-section {
+  background-color: var(--panel);
+  color: var(--color-text);
+  padding: 4rem 2rem;
+}
+
+.eventos-img {
+  object-fit: cover; /* llena el contenedor */
+  height: 100%;
+  width: 100%; 
+  display: block; /* elimina espacio inferior */
+}
+
+.eventos-section .btn{
+  background-color: var(--panel);
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.eventos-section .btn:hover{
+  background-color: var(--color-text);
+  color: var(--color-fondo);
+} 
+
+/* ========== FOOTER ========== */
+.footer-section{
+  background: var(--bg-page);
+  color: var(--color-text);
+}
+
+.footer-section a{
+  color: var(--color-text);
+  text-decoration: underline;
+  transition: color .2s ease;
+}
+
+.footer-section a:hover{
+  color: var(--color-primario);
+}
+
+.footer-section .btn{
+  background-color: var(--bg-page);
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.footer-section .btn:hover{
+  background-color: var(--color-primario);
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .footer-section { text-align: center; }
+  .footer-section .text-md-end { text-align: center !important; }
 }
 
