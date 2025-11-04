@@ -36,11 +36,13 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Habitaciones</a></li>
+                    <li><a href="spa.html">Spa</a></li>
                     <li><a href="reservas.html">Reservas</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </div>
         </div>
+    </header>
 
     <!--MAIN-->
     <main class="pt-5 pt-md-4">
@@ -68,28 +70,28 @@
             <div class="container py-5" id="ofertas">
                 <div id="carouselAuto" class="carousel slide mx-auto text-white ps-3" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <h2 class="mb-2 p-2 text-center text-white">OFERTAS DISPONIBLES</h2>
+                        <h3 class="mb-2 p-2 text-center text-white">OFERTAS DISPONIBLES</h3>
 
                         <!-- Contenido -->
                         <div class="carousel-item active">
-                            <p class="mb-2"><b>Last Minute</b></p>
-                            <p class="mb-2">Reserva de último minuto con un descuento del 25%</p>
+                            <p class="mb-2 ps-4"><b>Last Minute</b></p>
+                            <p class="mb-2 ps-4">Reserva de último minuto con un descuento del 25%</p>
                             <div class="text-center">
                                 <a href="#" class="btn boton m-1">ACTIVA</a>
                             </div>
                         </div>
 
                         <div class="carousel-item">
-                            <p><b>Reservando directo en nuestra web!</b></p>
-                            <p>Obtené un descuento especial sobre nuestras tarifas</p>
+                            <p class="mb-2 ps-4"><b>Reservando directo en nuestra web!</b></p>
+                            <p class="mb-2 ps-4">Obtené un descuento especial sobre nuestras tarifas</p>
                             <div class="text-center">
                                 <a href="#" class="btn boton m-1">ACTIVA</a>
                             </div>
                         </div>
 
                         <div class="carousel-item">
-                            <p><b>25 % OFF</b></p>
-                            <p>Reserva con un 25% off</p>
+                            <p class="mb-2 ps-4"><b>25 % OFF</b></p>
+                            <p class="mb-2 ps-4">Reserva con un 25% off</p>
                             <div class="text-center">
                                 <a href="#" class="btn boton m-1">ACTIVA</a>
                             </div>
@@ -99,76 +101,184 @@
             </div>
         </section>
         
-        <!-- TENGO QUE AGRANDAR LAS CARDS -->
         <!-- Info Habitaciones -->
-        <section class="pt-5">
-            <div class="container">
-                <h2 class="text-center mb-4">NUESTRAS HABITACIONES</h2>
+        <section class="container pt-5">
+            <article class="card mb-3 overflow-hidden card-info-habitacion">
+                <!-- EJECUTIVA -->
+                <!-- Imagen-Titulo -->
+                <div class="row g-0">
+                    <div>
+                        <img class="img-fluid w-100 object-fit-cover" src="images/suite.jpeg" alt="Habitacion Ejecutiva" loading="lazy">
+                        <h3 class="card-title m-4">EJECUTIVA</h3>
+                    </div>
+                </div>
 
-                <article class="card mb-3 overflow-hidden card-habitacion">
-                    <div class="row g-0">
-                        <!-- Imagen -->
-                        <div class="col-12 col-md-4">
-                            <img class="img-fluid" src="images/suite.jpeg" alt="Habitacion Ejecutiva" loading="lazy">
-                        </div>
-
-                        <!-- Contenido -->
-                        <div class="col-12 col-md-8">
-                            <div class="card-body">
-                                <h3 class="card-title mb-2">Ejecutiva</h3>
-                                <p class="card-text mb-3">Hervidor eléctrico | Aire acondicionado | Frigobar | TV Pantalla plana | Secador de pelo | Caja de seguridad</p>
-                                <!-- Precio y boton -->
-                                <p class="text-end">desde 103,13 USD/Noche</p>
-                                <p class="text-end">Disponible</p>
-                                <div class="d-flex"><a href="carrito.html" class="btn boton ms-auto">SELECCIONAR</a></div>
-                            </div>
+                <!-- Info -->
+                <div class="row g-0">
+                    <!--Euipamiento -->
+                    <div class="col-12 col-md-6">                         
+                        <h5 class="text-white text-start ms-4">Equipamiento de la habitación: </h5>
+                        <ul class="mb-4">
+                            <li>Habitación doble de 24 m². Capacidad maxima: 2 personas. Se pueden solicitar habitaciones comunicadas, según disponibilidad.</li>
+                            <li>1 cama King.</li>
+                            <li>Vistas a la ciudad.</li>
+                            <li>Desayuno buffet incluído. Con opciones vegetarianas/veganas y sin tacc.</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <ul class="mb-4 mt-4">
+                            <li>Caja fuerte.</li>
+                            <li>TV LED 40” con canales por cable HD.</li>
+                            <li>Aire acondicionado y calefacción.</li>
+                            <li>Wi-Fi.</li>
+                            <li>Servicio diario de limpieza.</li>
+                            <li>Cuna disponible bajo solicitud.</li>
+                        </ul>
+                    </div>
+                </div>
+                    
+                <!-- Horarios-Precios -->
+                <div class="row g-0 px-5 pb-3">
+                    <!-- Hora -->
+                    <div class="col-12 col-md-6">
+                        <div class="mt-auto text-start">
+                            <p>Horarios:</p>
+                            <p><b>Check in:</b> a partir de las 15 hs.</p>
+                            <p><b>Check out:</b> hasta las 11 hs.</p>
                         </div>
                     </div>
-                </article>
 
-                <article class="card mb-3 overflow-hidden card-habitacion">
-                    <div class="row g-0">
-
-                        <!-- Imagen -->
-                        <div class="col-12 col-md-4">
-                            <img class="img-fluid" src="images/suite.jpeg" alt="Habitacion Suite" loading="lazy">
-                        </div>
-
-                        <!-- Contenido -->
-                        <div class="col-12 col-md-8">
-                            <div class="card-body flex-column">
-                                <h3 class="card-title m-2">Suite</h3>
-                                <p class="card-text m-3">Hervidor eléctrico | Aire acondicionado | Frigobar | TV Pantalla plana | Secador de pelo | Caja de seguridad</p>
-                                <p class="text-end">desde 178,13 USD/Noche</p>
-                                <p class="text-end">Disponible</p>
-                                <div class="d-flex"><a href="carrito.html" class="btn boton ms-auto">SELECCIONAR</a></div>
-                            </div>
+                    <div class="col-12 col-md-6">    
+                        <!-- Precio -->
+                        <div class="mt-auto text-end">
+                            <p>desde 92,98 USD/Noche</p>
+                            <p class="text-success">Disponible</p>
+                            <a href="carrito.html" class="btn boton ms-auto">SELECCIONAR</a>
                         </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <article class="card mb-3 overflow-hidden card-habitacion">
-                    <div class="row g-0">
+            <!-- SUITE -->
+            <article class="card mb-3 overflow-hidden card-info-habitacion">
+                <!-- Imagen-Titulo -->
+                <div class="row g-0">
+                    <div>
+                        <img class="img-fluid w-100 object-fit-cover" src="images/suite.jpeg" alt="Habitacion Suite" loading="lazy">
+                        <h3 class="card-title m-4">SUITE</h3>
+                    </div>
+                </div>
 
-                        <!-- Imagen -->
-                        <div class="col-12 col-md-4">
-                            <img class="img-fluid"  src="images/suite_presidencial.jpeg" alt="Habitacion Suite Presidencial"
-                            loading="lazy">
-                        </div>
-                        <!-- Contenido -->
-                        <div class="col-12 col-md-8">
-                            <div class="card-body flex-column">
-                                <h3 class="card-title m-2">Suite Presidencial</h3>
-                                <p class="card-text m-3">Hervidor eléctrico | Aire acondicionado | Balcón | Frigobar | TV Pantalla plana | Sofa | Coffee Machine | Secador de pelo</p>
-                                <p class="text-end">desde 205,31 USD/Noche</p>
-                                <p class="text-end">Disponible</p>
-                                <div class="d-flex"><a href="carrito.html" class="btn boton ms-auto">SELECCIONAR</a></div>
-                            </div>
+                <!-- Info -->
+                <div class="row g-0">
+                    <!--Euipamiento -->
+                    <div class="col-12 col-md-6">                            
+                        <h5 class="text-white text-start ms-4">Equipamiento de la habitación: </h5>
+                        <ul class="mb-4">
+                            <li> Habitación amplia de 39 m². Capacidad máxima: 2 personas.</li>
+                            <li>2 Ambientes (sala living de estar, y dormitorio).</li>
+                            <li>1 cama King.</li>
+                            <li>Balcón con vistas al parque y a la piscina.</li>
+                            <li>Desayuno buffet incluído. Con opciones vegetarianas/veganas y sin tacc.</li>
+                            <li>Baño con bañera con hidromasaje y secador de cabello.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <ul class="mb-4 mt-4">
+                            <li>Baño para visitas.</li>
+                            <li>Caja fuerte.</li>
+                            <li>TV LED 43” con canales por cable HD.</li>
+                            <li>Aire acondicionado y calefacción.</li>
+                            <li>Wi-Fi.</li>
+                            <li>Servicio diario de limpieza.</li>
+                            <li>Cuna disponible bajo solicitud.</li>
+                        </ul>
+                    </div>
+                </div>
+                    
+                <!-- Horarios-Precios -->
+                <div class="row g-0 px-5 pb-3">
+                    <!-- Hora -->
+                    <div class="col-12 col-md-6">
+                        <div class="mt-auto text-start">
+                            <p>Horarios:</p>
+                            <p><b>Check in:</b> a partir de las 15 hs.</p>
+                            <p><b>Check out:</b> hasta las 11 hs.</p>
                         </div>
                     </div>
-                </article>
-                
-            </div>
+
+                    <div class="col-12 col-md-6">    
+                        <!-- Precio -->
+                        <div class="mt-auto text-end">
+                            <p>desde 103,13 USD/Noche</p>
+                            <p class="text-success">Disponible</p>
+                            <a href="carrito.html" class="btn boton ms-auto">SELECCIONAR</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SUITE PRESIDENCIAL-->
+            <article class="card mb-3 overflow-hidden card-info-habitacion">
+                <!-- Imagen-Titulo -->
+                <div class="row g-0">
+                    <div>
+                        <img class="img-fluid w-100 object-fit-cover" src="images/suite_presidencial.jpeg" alt="Habitacion Suite Presidencial" loading="lazy">
+                        <h3 class="card-title m-4">SUITE PRESIDENCIAL</h3>
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div class="row g-0">
+                    <!--Euipamiento -->
+                    <div class="col-12 col-md-6">                          
+                        <h5 class="text-white text-start ms-4">Equipamiento de la habitación: </h5>
+                        <ul class="mb-4">
+                            <li>Habitación amplia de 58 m². Capacidad máxima: 2 personas.</li>
+                            <li>2 Ambientes (sala living de estar, con mesa y dormitorio).</li>
+                            <li>1 cama King.</li>
+                            <li>Balcón con vistas al parque.</li>
+                            <li>Desayuno buffet incluído. Con opciones vegetarianas/veganas y sin tacc.</li>
+                            <li>Baño con ducha individual, una tina al costado de la cama, y secador de cabello.</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <ul class="mb-4 mt-4">
+                            <li>Baño para visitas.</li>        
+                            <li>Caja fuerte.</li>
+                            <li>TV LED 65” con canales por cable HD.</li>
+                            <li>Cafetera Nespresso</li>
+                            <li>Aire acondicionado y calefacción</li>
+                            <li>Wi-Fi.</li>
+                            <li>Servicio diario de limpieza.</li>
+                            <li>Cuna disponible bajo solicitud.</li>
+                        </ul>
+                    </div>
+                </div>
+                    
+                <!-- Horarios-Precios -->
+                <div class="row g-0 px-5 pb-3">
+                    <!-- Hora -->
+                    <div class="col-12 col-md-6">
+                        <div class="mt-auto text-start">
+                            <p>Horarios:</p>
+                            <p><b>Check in:</b> a partir de las 15 hs.</p>
+                            <p><b>Check out:</b> hasta las 11 hs.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">    
+                        <!-- Precio -->
+                        <div class="mt-auto text-end">
+                            <p>desde 203,63 USD/Noche</p>
+                            <p class="text-success">Disponible</p>
+                            <a href="carrito.html" class="btn boton ms-auto">SELECCIONAR</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
