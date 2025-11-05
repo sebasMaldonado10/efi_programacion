@@ -49,6 +49,7 @@ h4 { font-size: var(--fs-h4);}
 h5 { font-size: var(--fs-h5);}
 h6 { font-size: var(--fs-h6);}
 
+
 p, li, input, button {
   font-family: var(--fuente-principal);
   font-size: var(--fs-base);
