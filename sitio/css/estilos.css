@@ -576,3 +576,9 @@ body{ padding-bottom: 100px; }
   overflow:visible;
 }
 
+/*para contactos*/
+html {
+  scroll-behavior: smooth;
+}
+
+
