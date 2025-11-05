@@ -1,0 +1,505 @@
+/* ========== Paleta / variables ========== */
+:root{
+  --bg-page: #2f2f2f;     /* fondo oscuro general */
+  --panel:   #697075;     /* panel gris del texto */
+  --color-text:    #f8f8f5;     /* blanco marfil */
+  --radius:  1rem;        /* borde redondeado suave */
+  --shadow:  0 10px 30px rgba(0,0,0,.35);
+  --color-fondo: #0D0D0D;         /*negro carbon*/
+  --color-botones: #818b8b;       /* gris claro */
+  --color-boton-hover: #646b6b;   /* gris oscuro para hover*/
+  --color-primario: #C5A572;      /*oro*/
+  --color-hover: #D8B878;         /*oro claro para hover*/
+  --color-secundario: #174C47;    /*verde esmeralda suave*/
+  --color-gris: #202020;          /*gris carbón intermedio*/
+
+  /*TIPOGRAFIA*/
+  --fuente-titulo: 'Cormorant Garamond', serif;
+  --fuente-principal: 'Lato', serif;  
+    /*tamaño*/
+  --fs-base: 1rem;               /* 16px */
+  --fsmall: 0.75rem;             /* 12px */
+  --fs-h1: 2.50rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.75rem;
+  --fs-h4: 1.50rem;
+  --fs-h5: 1.25rem;
+  --fs-h6: 1.15rem;
+}
+
+/* ======= GENERAL, FONDO, TAMAÑOS ======== */
+body{
+  background: var(--bg-page);
+  color: var(--color-text);
+  font-family: var(--fuente-principal);
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--fuente-titulo);
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h2 { font-size: var(--fs-h2);}
+h1 { font-size: var(--fs-h1);}
+h3 { font-size: var(--fs-h3);}
+h4 { font-size: var(--fs-h4);}
+h5 { font-size: var(--fs-h5);}
+h6 { font-size: var(--fs-h6);}
+
+p, li, input, button {
+  font-family: var(--fuente-principal);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+#logo{
+  max-height: 200px;
+}
+#logotipo{
+  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ver para que el logo quede un poco mas opaco */
+#logo::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== MENU ========== */
+.menu-lista a{
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+h5 {
+  text-align: center;
+  color: var(--color-text);
+}
+
+/* Espaciado general entre secciones */
+.section-spacing {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+/* ========== 3 imágenes full-screen ========== */
+.hero-photos{
+  min-height: 100svh;     /* soporta barras móviles modernas */
+}
+.hero-photos > [class*="col-"]{
+  height: 100svh;         /* cada columna ocupa el alto de pantalla */
+}
+.hero-photos img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== ABOUT (replica Aken) ========== */
+
+.about-section .row{
+  box-shadow: var(--shadow);
+  overflow: hidden;  /* recorta bordes redondeados */
+}
+
+/* Panel de texto (izquierda) */
+.about-text{
+  background: var(--panel);
+  min-height: 360px;      /* altura agradable en desktop */
+  display: flex;
+  align-items: center;
+}
+
+.about-media{
+  min-height: 360px;      /* altura agradable en desktop */
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border: 0;
+}
+
+/* Botón outline fino */
+.about-text .btn.btn-outline-light{
+  border-width: 1.5px;
+  border-radius: .25rem;
+  font-weight: 500;
+  transition: all .2s ease;
+}
+.about-text .btn.btn-outline-light:hover{
+  background: #f1f3f5;
+  color: #212529;
+  border-color: #f1f3f5;
+}
+
+/* ========== RESERVAS ============ */
+/*Seccion Reservas*/
+.boton{
+  background-color: var(--color-botones);
+  color: var(--color-text);
+}
+
+.card-habitacion{
+    background-color: var(--color-gris);
+    color: var(--color-text);
+}
+
+/* ========== DETALLE RESERVAS ============ */
+/*Seccion Detalle*/
+.card-info-habitacion{
+  background-color: var(--color-gris);
+  color: var(--color-text);
+  display: flex;
+}
+.card-info-habitacion .col-md-8 {
+  display: flex;
+}
+.card-info-habitacion .card-body{
+  display: flex;
+  flex-direction: column;
+  flex: 1; 
+  padding: 1.5rem;
+}
+
+.card-info-habitacion img{
+  object-position: center;
+  display: block;
+  height: 300px;
+}
+
+.card-info-habitacion ul{
+  padding-left: 4rem; 
+  font-size: var(--fsmall);
+}
+
+#ofertas{
+  background-color: var(--color-gris);
+  border-radius: 10px;
+}
+
+/* ========== CARRITO ============ */
+/*Seccion Carrito*/
+
+.img-tarjetas{
+  height: 100px;
+  width: auto;
+}
+.tarjeta{
+  max-width: 250px;
+  width: 100%;
+}
+
+/* ========== SPA ============== */
+/* Seccion Spa */
+.hero-spa {
+  background-image: url(/images/img_spa.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-spa::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Primera imagen (base) */
+.img-spa1 {
+  max-width: 60%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Segunda imagen (superpuesta) */
+.img-spa2 {
+  max-width: 40%;
+  position: absolute;
+  bottom: -30px;       
+  right: 50px;  
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+#spa-info {
+  min-height: 350px;
+}
+
+#spa-info .h1 {
+  min-height: 350px;
+}
+
+/* segunda portada */
+.hero-spa2 {
+  background-image: url(/images/aceites_spa.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-spa2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#spa-reservas img{
+  height: 700px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 300px;
+}
+
+/* ========== RESPOSIVE ========== */
+@media (max-width: 991.98px){ /* < lg */
+  .about-text{ min-height: unset; }
+  .about-media{ min-height: 0; height: auto; } /* video o imagen se adapta */
+
+    /*Reservas*/
+  .card-habitacion{
+    .card-habitacion .col-md-4 img {min-height: 200px;}
+  }
+
+  .form-reservas{ object-position: center; }
+
+  /*Carrito*/
+  .tarjeta {max-width: 90%;}
+}
+
+@media (min-width: 992px) {
+  .card-habitacion {
+    max-width: 700px;
+  }
+
+  .img-spa3, .img-spa4 {
+  height: auto;
+}
+}
+
+/* Alto moderado y consistente del carrusel */
+.room-carousel .carousel-inner{
+  height: clamp(400px, 70vh, 600px);
+}
+.room-carousel .carousel-item{ height: 100%; }
+.room-carousel img{
+  height: 100%;
+  object-fit: cover; /* llena el contenedor */
+  object-position: center;
+  display: block; /* elimina espacio inferior */
+}
+
+/* Tabs estilo subrayado */
+#roomsTabs .nav-link{
+  color: rgba(255,255,255,.85);
+  padding: .25rem .5rem;
+}
+#roomsTabs .nav-link:hover{ color:#fff; }
+#roomsTabs .nav-link.active{
+  color:#fff;
+  text-underline-offset:.35em;
+}
+
+.boton:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/*Seccion Reservas*/
+#card-habitacion{
+    background-color: var(--color-gris);
+    color: var(--color-text);
+}
+
+/* ===== CHECK-IN FLOTANTE ===== */
+.checkin-bar{
+  position: fixed; 
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  z-index: 1200;
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(6px);
+  padding: .7rem .5rem;
+}
+
+/* Inputs estilo línea */
+.checkin-input{
+  background: transparent !important;
+  color: #fff !important;
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  border-radius: 0 !important;
+}
+
+/* OJO: el select es el mismo elemento con ambas clases */
+.form-select.checkin-input{
+  background: transparent !important;
+  color: #fff !important;
+  border: none !important;
+  border-bottom: 1px solid #fff !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* color para las options del select */
+.form-select.checkin-input option{
+  color: var(--color-text);
+  background-color: var(--bg-page)
+}
+
+/* boton de reserva*/
+.checkin-bar .btn{
+  color: var(--color-text);
+  border-color: var(--color-text);
+  transition: background-color .2s ease;
+}
+
+.checkin-bar .btn:hover{
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+/* Para que la barra no tape contenido */
+body{ padding-bottom: 100px; }
+
+/* seccion de eventos */
+
+.eventos-section {
+  background-color: var(--panel);
+  color: var(--color-text);
+  padding: 4rem 2rem;
+}
+
+.eventos-img {
+  object-fit: cover; /* llena el contenedor */
+  height: 100%;
+  width: 100%; 
+  display: block; /* elimina espacio inferior */
+}
+
+.eventos-section .btn{
+  background-color: var(--panel);
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.eventos-section .btn:hover{
+  background-color: var(--color-text);
+  color: var(--color-fondo);
+} 
+
+/* ========== FOOTER ========== */
+.footer-section{
+  background: var(--bg-page);
+  color: var(--color-text);
+}
+
+.footer-section a{
+  color: var(--color-text);
+  text-decoration: underline;
+  transition: color .2s ease;
+}
+
+.footer-section a:hover{
+  color: var(--color-primario);
+}
+
+.footer-section .btn{
+  background-color: var(--bg-page);
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.footer-section .btn:hover{
+  background-color: var(--color-primario);
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .footer-section { text-align: center; }
+  .footer-section .text-md-end { text-align: center !important; }
+}
+
+
+
+/* ===== Habitaciones  ===== */
+.presentacion {
+  background-color: #3a3a3a;       /* gris oscuro similar al del sitio */
+  color: #fff;                     /* texto blanco */
+  text-align: center;              /* centra el texto */
+  padding: 60px 20px;              /* espacio interior */
+  font-family: 'Poppins', sans-serif; /* fuente elegante y moderna */
+}
+
+.presentacion h6 {
+  font-size: 11px;
+  letter-spacing: 2px;             /* separa las letras */
+  color: #9aa0a6;                  /* gris claro */
+  text-transform: uppercase;       /* mayúsculas */
+  margin-bottom: 10px;
+}
+
+.presentacion h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.presentacion p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #fff; 
+  max-width: 700px;
+  margin: 0 auto;                  /* centra el párrafo */
+  padding-bottom: 40px;
+  
+  
+}
+
+/* Mostrar la foto completa (sin recortar) */
+.room-img-bleed{
+  display: block;
+  width: 100%;
+  height: auto;        /* mantiene proporción original */
+  max-height: 75vh;    /* evita que sea más alta que la pantalla */
+  object-fit: contain; /* asegura que entre completa en el cuadro */
+  background: #2e2e2e; /* opcional: “letterbox” gris si sobran bordes */
+}
+
+/* Columna de texto simple, alineado a la izquierda */
+.room-text-simple{
+  max-width: 720px;     /* evita líneas muy largas en pantallas grandes */
+  text-align: left;
+  
+}
+
+/* Si tenés un wrapper del carrusel, desactiva límites y sombras */
+.carousel-wrapper{
+  max-width:100%;
+  margin:0;
+  box-shadow:none;
+  overflow:visible;
+}
+
