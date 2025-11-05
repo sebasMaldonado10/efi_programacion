@@ -208,7 +208,7 @@ h5 {
 /* ========== SPA ============== */
 /* Seccion Spa */
 .hero-spa {
-  background-image: url(/images/img_spa.png);
+  background-image: url(/sitio/images/img_spa.png);
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -249,7 +249,7 @@ h5 {
 
 /* segunda portada */
 .hero-spa2 {
-  background-image: url(/images/aceites_spa.png);
+  background-image: url(/sitio/images/aceites_spa.png);
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -385,7 +385,8 @@ h5 {
 /* Para que la barra no tape contenido */
 body{ padding-bottom: 100px; }
 
-/* seccion de eventos */
+
+/*=====SECCION DE EVENTOS=======*/
 .eventos-section {
   background-color: var(--panel);
   color: var(--color-text);
@@ -410,6 +411,53 @@ body{ padding-bottom: 100px; }
   background-color: var(--color-text);
   color: var(--color-fondo);
 } 
+
+/*GASTRONOMIA*/
+.gastronomia-section {
+  background-color: var(--bg-page);
+  overflow: visible;
+}
+
+.gastronomia-section .img-principal{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;   
+}
+
+/* Imagen secundaria flotante */
+.gastronomia-section .img-secundaria {
+  position: absolute;
+  bottom: -80px; /* sobresale hacia abajo */
+  left: 10%;
+  width: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  z-index: 3;
+}
+
+/*DEPORTES Y ACTIVIDADES*/
+.actividades-section {
+  background-color: var(--color-boton-hover);
+  overflow: visible;
+}
+
+.actividades-section .img-principal{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;   
+}
+
+.actividades-section .img-secundaria {
+  max-width: 50%;
+  position: absolute;
+  bottom: -30px;       
+  right: 50px;  
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
 
 /* ========== FOOTER ========== */
 .footer-section{
