@@ -280,6 +280,25 @@ h5 {
   height: 300px;
 }
 
+#spa-info .btn {
+  background-color: var(--bg-page);
+  border-color: var(--color-text);
+}
+
+#spa-info .btn:hover {
+  background-color: var(--color-text);
+  color: var(--color-fondo);
+}
+
+#spa-reservas .btn {
+  background-color: var(--bg-page);
+  border-color: var(--color-text);
+}
+
+#spa-reservas .btn:hover {
+  background-color: var(--color-text);
+  color: var(--color-fondo);
+}
 /* ========== RESPOSIVE ========== */
 @media (max-width: 991.98px){ /* < lg */
   .about-text{ min-height: unset; }
