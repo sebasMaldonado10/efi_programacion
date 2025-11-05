@@ -498,3 +498,62 @@ body{ padding-bottom: 100px; }
   .footer-section .text-md-end { text-align: center !important; }
 }
 
+/* ===== Habitaciones  ===== */
+.presentacion {
+  background-color: #3a3a3a;       /* gris oscuro similar al del sitio */
+  color: #fff;                     /* texto blanco */
+  text-align: center;              /* centra el texto */
+  padding: 60px 20px;              /* espacio interior */
+  font-family: 'Poppins', sans-serif; /* fuente elegante y moderna */
+}
+
+.presentacion h6 {
+  font-size: 11px;
+  letter-spacing: 2px;             /* separa las letras */
+  color: #9aa0a6;                  /* gris claro */
+  text-transform: uppercase;       /* mayúsculas */
+  margin-bottom: 10px;
+}
+
+.presentacion h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.presentacion p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #fff; 
+  max-width: 700px;
+  margin: 0 auto;                  /* centra el párrafo */
+  padding-bottom: 40px;
+  
+  
+}
+
+/* Mostrar la foto completa (sin recortar) */
+.room-img-bleed{
+  display: block;
+  width: 100%;
+  height: auto;        /* mantiene proporción original */
+  max-height: 75vh;    /* evita que sea más alta que la pantalla */
+  object-fit: contain; /* asegura que entre completa en el cuadro */
+  background: #2e2e2e; /* opcional: “letterbox” gris si sobran bordes */
+}
+
+/* Columna de texto simple, alineado a la izquierda */
+.room-text-simple{
+  max-width: 720px;     /* evita líneas muy largas en pantallas grandes */
+  text-align: left;
+  
+}
+
+/* Si tenés un wrapper del carrusel, desactiva límites y sombras */
+.carousel-wrapper{
+  max-width:100%;
+  margin:0;
+  box-shadow:none;
+  overflow:visible;
+}
+
