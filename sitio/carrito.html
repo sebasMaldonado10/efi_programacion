@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Detalle de Reserva</title>
+    <title>Carrito</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="detalleReservas">    
+<body class="carrito">    
     <header class="container-fluid">
         <!-- Navbar hamburguesa -->
         <nav class="navbar navbar-dark bg-dark opacity-75 fixed-top shadow-sm">
@@ -41,94 +41,143 @@
                 </ul>
             </div>
         </div>
+    </header>
 
     <!--MAIN-->
-    <main class="pt-5 pt-md-4">
-        <!-- Resumen -->
-        <section class="container py-5" id="resumen-reserva">
-            <div class="mx-auto bg-dark text-white rounded-3 shawdow p-3 p-md-4" style="max-width: 520px;">
-                <h3 class="mb-2 text-center">RESUMEN</h3>
-                <hr class="my-3">
-                <p class="mb-2 text-center"><b>ENTRADA</b> MIE 29 OCTUBRE 2025</p>
-                <p class="mb-2 text-center"><b>SALIDA</b> JUE 30 OCTUBRE 2025</p>
-                <p class="mb-2 text-center">
-                    1 x <i class="fa fa-male" aria-hidden="true"></i> 
-                    1 x <i class="fa fa-moon-o" aria-hidden="true"></i> 
-                    1 x <i class="fa fa-home" aria-hidden="true"></i>
-                </p>
-                <br>
-                <div class="text-center">
-                    <a class="btn boton m-1" href="reservas.html">MODIFICAR LA BÚSQUEDA</a>
+    <main class="container-fluid pt-5">
+        <div class="row g-4">
+            <!-- Datos huesped -->
+            <section class="container py-5" id="datos-huesped">
+                <h2 class="mb-4 text-center">DATOS DEL HUÉSPED</h2>
+
+                <article class="mx-auto bg-dark text-white rounded-3 shadow p-4 p-md-5" style="max-width: 1000px;">
+                    <form class="form-datos">
+                        <div class="row g-3">
+                            <!-- Nombre-Apellido -->
+                            <div class="col-md-6">
+                            <input type="text" id="nombre" class="form-control" placeholder="Nombre">
+                            </div>
+                            <div class="col-md-6">
+                            <input type="text" id="apellido" class="form-control" placeholder="Apellido">
+                            </div>
+                            <!-- Dirección-Ciudad -->
+                            <div class="col-md-6">
+                            <input type="text" id="direccion" class="form-control" placeholder="Dirección">
+                            </div>
+                            <div class="col-md-6">
+                            <input type="text" id="ciudad" class="form-control" placeholder="Ciudad">
+                            </div>
+                            <!-- Código postal-País -->
+                            <div class="col-md-6">
+                            <input type="number" id="postal" class="form-control" placeholder="Cod. Postal">
+                            </div>
+                            <div class="col-md-6">
+                            <select id="pais" class="form-select">
+                                <option selected>Argentina</option>
+                                <option>Chile</option>
+                                <option>Uruguay</option>
+                            </select>
+                            </div>
+                            <!-- Email-Teléfono -->
+                            <div class="col-md-6">
+                            <input type="email" id="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col-md-6">
+                            <input type="tel" id="telefono" class="form-control" placeholder="+54 Teléfono">
+                            </div>
+                            <!-- Peticiones -->
+                            <div class="col-12">
+                            <textarea id="peticiones" class="form-control" rows="2" placeholder="Peticiones especiales"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </article>
+            </section>
+
+            <!-- Datos pago + Política -->
+            <section class="container" id="datos-pago">
+                <h2 class="mb-4 text-center">PASARELA DE PAGO</h2>
+
+                <article class="mx-auto bg-dark text-white rounded-3 shadow p-3 p-md-4" style="max-width: 1000px;">
+
+                    <div class="d-flex align-items-center">
+                        <h3 class="text-white mb-0 me-3">Tarjeta de Crédito</h3> <img src="images/tarjetas.png" alt="Tarjetas de credito" class="img-tarjetas">
+                    </div>
+
+                    <div class="row g-4 align-items-center">
+
+                        <!-- IZQ: Imagenes-Form -->
+                        <article class="col-12 col-md-7 d-flex flex-column justify-content-start align-items-center">
+                            <div class="d-flex justify-content-center align-items-start flex-wrap gap-2 mb-3 mt-0 pt-0">
+                                <img src="images/tarjeta_frente.png" alt="Tarjeta frente" class="img-fluid tarjeta">
+                                <img src="images/tarjeta_dorso.png" alt="Tarjeta dorso" class="img-fluid tarjeta">
+                            </div>
+
+                            <form class="form-pago w-100 w-md-75 text-center">
+                                <div class="row g-2 justify-content-center">
+                                    <!-- Titular -->
+                                    <div class="col-12 col-md-8">
+                                        <input type="text" id="titular" class="form-control" placeholder="Titular de la tarjeta" required>
+                                    </div>
+                                    <!-- Numero tarjeta-->
+                                    <div class="col-12 col-md-8">
+                                        <input type="text" id="numero-tarjeta" class="form-control" placeholder="Numero de la tarjeta" inputmode="numeric" maxlength="19" required>
+                                    </div>
+                                    <!-- Vencimiento -->
+                                    <div class="col-6 col-md-5">
+                                        <input type="month" id="vencimiento" class="form-control" placeholder=" Validez (MM/AAAA)" required>
+                                    </div>
+                                    <!-- CVV -->
+                                    <div class="col-6 col-md-3">
+                                        <input type="password" id="codigo" class="form-control" placeholder="CVV" inputmode="numeric" maxlength="3" required>
+                                    </div>
+                                </div>
+                            </form>
+                        </article>
+
+                        <!-- DER: Política -->
+                        <aside class="col-12 col-md-5">
+                            <div class="text-white rounded-2 p-3 policies">
+                                <p>El cargo en su tarjeta de crédito dependerá de la condición de la tarifa seleccionada. La información de de su tarjeta de crédito es necesaria para garantizar su reserva.</p>
+                                <p>Sus datos personales y los de su tarjeta de crédito se transmiten a nuestro web server cifrados, utilizando la tecnología estándar "Secure Socket Layer" (SSL).
+                                Nuestro servidor y nuestra red son protegidos por firewall para evitar accesos no autorizados.
+                                Esto implica que la transmisión de los datos de su tarjeta de crédito es segura y protegida totalmente por medio de las mas modernas tecnologías.
+                                Los datos de su tarjeta de crédito serán conservados por tecnes.com hasta la fecha de su llegada en el propiedad. Después de esta fecha serán destruidos.</p>
+                            </div>
+                        </aside>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <!-- Politicas de privacidad y terminos y condiciones -->
+        <section class="container py-5" id="term-cond">
+            <article class="mx-auto bg-dark text-white rounded-3 shadow p-3 p-md-4" style="max-width: 1000px;">
+                
+                <h3 class="text-white mb-0 me-3">Política de provacidad</h3>
+                <form action="">
+                    <!-- Check -->
+                    <div class="m-3">
+                        <input type="checkbox" required> 
+                        <label>Autorizo al tratamiento de mis datos personales por parte de la propiedad para hacer efectiva mi reserva.</label>
+                    </div>
+                </form>
+                
+                <h3 class="text-white mb-0 me-3">Terminos y condiciones</h3>
+                <form action="">
+                    <!-- Term -->
+                    <div class="m-3">
+                        <input type="checkbox" required>  
+                        <label>Acepto las condiciones descriptas para la cancelación de esta reserva.</label>
+                    </div>
+                </form>
+
+                <!-- Botón -->
+                <div class="col-12 text-center pt-3">
+                    <a href="index.html" class="btn boton px-5">CONFIRMAR DATOS</a>
                 </div>
-            </div>
+            </article>
         </section>
-        
-        <main class="container-fluid pt-5 pt-md-4">
-            <div class="row g-4">
-                <!-- Datos huesped -->
-                <section class="col-12 col-md-4" id="form-reservas">
-                    <div class="container p-5 my-5 bg-dark text-white ms-5">
-                        <hr>
-                        <h3 class="mb-2 text-center">ENTRADA/SALIDA</h3>
-                        <input type="date" class="form-control" placeholder="Entrada/Salida">
-                        
-                        <hr>
-                        <h3 class="mb-2 text-center">HABITACIONES</h3>
-                        <div class="row">
-                            <div class="col">
-                                <i class="fa fa-male" aria-hidden="true"></i>
-                                <form class="mb-3">
-                                    <input type="number" class="form-control" id="adultos" name="adultos" min="1" max="6" value="1">
-                                </form>
-                            </div>
-                            <div class="col">
-                                <i class="fa fa-child" aria-hidden="true"></i>
-                                <form class="mb-3">
-                                    <input type="number" class="form-control" id="ninos" name="ninos" min="1" max="6" value="0">
-                                </form>
-                            </div>
-                        </div>
-
-                        <br>
-                        <button type="submit" class="btn boton m-1">AÑADIR HABITACIÓN</button>
-                        <br>
-                        <a class="btn boton m-1" href="detalle_reservas.html">BUSCAR</a>
-                    </div>
-                </section>
-
-                <!-- Info Pago -->
-                <section class="col-12 col-md-4" id="form-reservas">
-                    <div class="container p-5 my-5 bg-dark text-white ms-5">
-                        <hr>
-                        <h3 class="mb-2 text-center">ENTRADA/SALIDA</h3>
-                        <input type="date" class="form-control" placeholder="Entrada/Salida">
-                        
-                        <hr>
-                        <h3 class="mb-2 text-center">HABITACIONES</h3>
-                        <div class="row">
-                            <div class="col">
-                                <i class="fa fa-male" aria-hidden="true"></i>
-                                <form class="mb-3">
-                                    <input type="number" class="form-control" id="adultos" name="adultos" min="1" max="6" value="1">
-                                </form>
-                            </div>
-                            <div class="col">
-                                <i class="fa fa-child" aria-hidden="true"></i>
-                                <form class="mb-3">
-                                    <input type="number" class="form-control" id="ninos" name="ninos" min="1" max="6" value="0">
-                                </form>
-                            </div>
-                        </div>
-
-                        <br>
-                        <button type="submit" class="btn boton m-1">AÑADIR HABITACIÓN</button>
-                        <br>
-                        <a class="btn boton m-1" href="detalle_reservas.html">BUSCAR</a>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Politicas de privacidad y terminos y condiciones -->
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>

@@ -11,17 +11,41 @@
 
 <body class="check-in">
     <header class="container-fluid">
-        <nav class="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                <img src="images/isotipo.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-center">
-                </a>
+        <!-- Navbar hamburguesa -->
+        <nav class="navbar navbar-dark bg-dark opacity-75 fixed-top shadow-sm">
+            <div class="container-fluid px-3">
+            <button class="navbar-toggler border-0" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             </div>
         </nav>
 
-        <h1>Check IN</h1>
-        <p>Complete los siguientes datos para encontrar su Reserva</p>
+        <!-- Menú colapsable -->
+        <div class="collapse position-absolute top-0 start-0 w-100 z-2" id="navbarToggleExternalContent" data-bs-theme="dark">
+            <div class="bg-dark p-4 text-start ps-5">
+                <!-- Logo centrado arriba -->
+                <div class="position-absolute top-0 start-50 translate-middle-x mt-3 z-3">
+                    <img src="images/logotipo.png" alt="Logo Oasis Hotel" id="logo">
+                </div>
+                <h5 class="text-cener">UN HOTEL DE VERDAD</h5>
+                <ul class="list-unstyled fs-5 mb-0 menu-lista">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Habitaciones</a></li>
+                    <li><a href="spa.html">Spa</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
+
+    <h1>Check IN</h1>
+    <p>Complete los siguientes datos para encontrar su Reserva</p>
+
 
     <main>
         <section class="container-fluid">
