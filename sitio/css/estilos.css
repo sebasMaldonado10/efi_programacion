@@ -526,31 +526,6 @@ body{ padding-bottom: 100px; }
   font-family: 'Poppins', sans-serif; /* fuente elegante y moderna */
 }
 
-.presentacion h6 {
-  font-size: 11px;
-  letter-spacing: 2px;             /* separa las letras */
-  color: #9aa0a6;                  /* gris claro */
-  text-transform: uppercase;       /* mayúsculas */
-  margin-bottom: 10px;
-}
-
-.presentacion h2 {
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.presentacion p {
-  font-size: 12px;
-  line-height: 1.6;
-  color: #fff; 
-  max-width: 700px;
-  margin: 0 auto;                  /* centra el párrafo */
-  padding-bottom: 40px;
-  
-  
-}
-
 /* Mostrar la foto completa (sin recortar) */
 .room-img-bleed{
   display: block;
